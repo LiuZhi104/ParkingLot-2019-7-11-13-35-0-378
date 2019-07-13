@@ -32,31 +32,31 @@ public class ParkingCarStoryOneTest {
         Assertions.assertSame(firstCar,fetchFirstCar);
         Assertions.assertSame(secondCar,fetchSecondCar);
     }
-//    @Test
-//    public void should_return_exception_when_wrong_or_does_not_give_ticket_back_to_parking_boy_to_fetch_car(){
-//        //given
-//        Car car=new Car();
-//        Parkinglot parkinglot=new Parkinglot();
-//        Ticket ticket= new Ticket();
-//        Parkingboy parkingboy=new Parkingboy(parkinglot);
-//        // when
-//        Ticket ticket=parkingboy.park(parkinglot);
-//        Car fetchCar=parkingboy.fetchCar(ticket);
-//        //then
-//        Assertions.assertSame(car,fetchCar);
-//    }
+    @Test
+    public void should_return_null_when_wrong_or_does_not_give_ticket_back_to_parking_boy_to_fetch_car(){
+        //given
+        Car car=new Car();
+        Parkinglot parkinglot=new Parkinglot();
+        Parkingboy parkingboy=new Parkingboy(parkinglot);
+        // when
+        parkingboy.park(car);
+        Ticket ticket=new Ticket();
+        Car fetchCar=parkingboy.fetchCar(ticket);
+        //then
+        Assertions.assertSame(null,fetchCar);
+    }
 //    @Test
 //    public void should_return_exception_when_used_ticket_back_to_parking_boy_to_fetch_car(){
 //        //given
 //        Car car=new Car();
 //        Parkinglot parkinglot=new Parkinglot();
-//        Ticket ticket= new Ticket();
 //        Parkingboy parkingboy=new Parkingboy(parkinglot);
 //        // when
-//        Ticket ticket=parkingboy.park(parkinglot);
+//        parkingboy.park(car);
+//
 //        Car fetchCar=parkingboy.fetchCar(ticket);
 //        //then
-//        Assertions.assertSame(car,fetchCar);
+//        Assertions.assertSame(null,fetchCar);
 //    }
 //    @Test
 //    public void should_return_exception_when_parking_lot_is_no_position(){
