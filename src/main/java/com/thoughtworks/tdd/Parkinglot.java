@@ -4,11 +4,19 @@ import java.util.HashMap;
 
 public class Parkinglot {
     private HashMap<Ticket,Car> ticketCarHashMap;
-    public Parkinglot(HashMap<Ticket, Car> ticketCarHashMap) {
-        this.ticketCarHashMap = ticketCarHashMap;
-    }
-    public Ticket getCarTicket() {
-         return ticketCarHashMap.;
+
+    public Parkinglot() {
+        this.ticketCarHashMap =new HashMap<>();
     }
 
+    public Ticket park(Car car) {
+        Ticket ticket=new Ticket();
+        ticketCarHashMap.put(ticket,car);
+        return ticket;
+    }
+
+
+    public Car getCar(Ticket ticket) {
+        return ticketCarHashMap.get(ticket);
+    }
 }
