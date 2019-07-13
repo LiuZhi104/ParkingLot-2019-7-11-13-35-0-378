@@ -45,19 +45,19 @@ public class ParkingCarStoryOneTest {
         //then
         Assertions.assertSame(null,fetchCar);
     }
-//    @Test
-//    public void should_return_exception_when_used_ticket_back_to_parking_boy_to_fetch_car(){
-//        //given
-//        Car car=new Car();
-//        Parkinglot parkinglot=new Parkinglot();
-//        Parkingboy parkingboy=new Parkingboy(parkinglot);
-//        // when
-//        parkingboy.park(car);
-//
-//        Car fetchCar=parkingboy.fetchCar(ticket);
-//        //then
-//        Assertions.assertSame(null,fetchCar);
-//    }
+    @Test
+    public void should_return_null_when_used_ticket_back_to_parking_boy_to_fetch_car(){
+        //given
+        Car car=new Car();
+        Parkinglot parkinglot=new Parkinglot();
+        Parkingboy parkingboy=new Parkingboy(parkinglot);
+        Ticket ticket=new Ticket();
+        // when
+        parkingboy.park(car);
+        Car fetchCar=parkingboy.fetchCar(ticket);
+        //then
+        Assertions.assertSame(null,fetchCar);
+    }
 //    @Test
 //    public void should_return_exception_when_parking_lot_is_no_position(){
 //        //given
