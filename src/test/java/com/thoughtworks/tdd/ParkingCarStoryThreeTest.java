@@ -10,8 +10,8 @@ public class ParkingCarStoryThreeTest {
     public void should_return_car_when_parking_ticket_back_to_parking_boy_to_fetch_car_muiltiple_car() {
         //given
         Car car = new Car();
-        Parkinglot firstParkinglot = new Parkinglot();
-        Parkingboy parkingboy = new Parkingboy(firstParkinglot);
+        Parkinglot Parkinglot = new Parkinglot();
+        Parkingboy parkingboy = new Parkingboy(Parkinglot);
 
         // when
         List<Parkinglot> parkinglots = new ArrayList<Parkinglot>();
@@ -27,8 +27,8 @@ public class ParkingCarStoryThreeTest {
     public void should_return_car_when_parking_ticket_back_to_parking_boy_to_fetch_car_muiltiple_car_statify_1_and_2() {
         //given
         Car car = new Car();
-        Parkinglot firstParkinglot = new Parkinglot();
-        Parkingboy parkingboy = new Parkingboy(firstParkinglot);
+        Parkinglot parkinglot = new Parkinglot();
+        Parkingboy parkingboy = new Parkingboy(parkinglot);
 
         // when
         List<Parkinglot> parkinglots = new ArrayList<Parkinglot>();
