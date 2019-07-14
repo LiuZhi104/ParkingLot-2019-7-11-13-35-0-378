@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingCarStoryFour {
+public class ParkingCarStoryFourTest {
 
     @Test
     public void should_return_car_when_smart_parkingboy_park_cars_to_parking_lot_which_contains_more_empty_positions() {

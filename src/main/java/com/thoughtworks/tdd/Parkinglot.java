@@ -5,6 +5,15 @@ import java.util.HashMap;
 public class Parkinglot {
     private HashMap<Ticket,Car> ticketCarHashMap;
     private int capacity;
+    private  Parkingboy parkingboy;
+    private  SmartParkingBoy smartParkingBoy;
+    private  SuperSmartParkingBoy superSmartParkingBoy;
+    private  Manager manager;
+
+    public Parkinglot(Parkingboy parkingboy) {
+        this.parkingboy = parkingboy;
+    }
+
 
     public Parkinglot(int capacity) {
         this.capacity = capacity;
