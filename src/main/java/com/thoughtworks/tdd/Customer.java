@@ -10,4 +10,8 @@ public class Customer {
     public String getErrorMessege(Car fetchCar) {
         return  "Please provide your parking ticket.";
     }
+
+    public String getErrorPositionMessege(Ticket ticket) {
+        return "Not enough position.";
+    }
 }

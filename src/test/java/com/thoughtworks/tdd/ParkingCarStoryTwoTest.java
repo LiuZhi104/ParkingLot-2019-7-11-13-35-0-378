@@ -37,4 +37,20 @@ public class ParkingCarStoryTwoTest {
         Assertions.assertSame("Please provide your parking ticket.",actulMessege);
 
     }
+    @Test
+    public void should_retrun_not_enough_position_when_parking_boy_attempt_to_park_car_into_parking_lot_without_position(){
+        //given
+        Car car=new Car();
+        Parkinglot parkinglot=new Parkinglot(11);
+        Parkingboy parkingboy=new Parkingboy(parkinglot);
+        Customer customer=new Customer();
+        // when
+
+        Ticket ticket=parkingboy.park(car);
+        String actulMessege=customer.getErrorPositionMessege(ticket);
+        //then
+        Assertions.assertSame("Not enough position.",actulMessege);
+
+    }
+
 }
