@@ -7,7 +7,7 @@ public class SmartParkingBoy extends Parkingboy {
     }
 
     @Override
-    public Ticket park(Car car) {
+    public Ticket park(Car car)  {
         return super.park(car);
     }
 

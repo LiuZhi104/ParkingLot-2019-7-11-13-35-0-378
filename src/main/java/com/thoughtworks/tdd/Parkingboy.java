@@ -1,17 +1,21 @@
 package com.thoughtworks.tdd;
 
+import java.util.List;
+
 public class Parkingboy {
-    private Parkinglot parkinglot;
+    private List<Parkinglot> parkinglots;
 
-    public Parkingboy(Parkinglot parkinglot) {
-        this.parkinglot = parkinglot;
+    public Parkingboy(List<Parkinglot> parkinglots) {
+        this.parkinglots = parkinglots;
     }
 
-    public Ticket park(Car car) {
-        return parkinglot.park(car);
+    public Ticket park(Car car){
+          return parkinglot.park(car);
     }
 
-    public Car fetchCar(Ticket ticket) {
-        return parkinglot.getCar(ticket);
+    public Car fetchCar(Ticket ticket){
+
+            return parkinglot.getCar(ticket);
+
     }
 }

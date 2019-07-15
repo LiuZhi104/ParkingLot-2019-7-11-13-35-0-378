@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ParkingCarStoryFiveTest {
     @Test
-    public void should_return_car_when_super_smart_parking_boy_park_cars_to_parking_lot_which_has_a_larger_available_position_rate () {
+    public void should_return_car_when_super_smart_parking_boy_park_cars_to_parking_lot_which_has_a_larger_available_position_rate ()  {
         //given
         Car car = new Car();
         Parkinglot parkinglot = new Parkinglot();

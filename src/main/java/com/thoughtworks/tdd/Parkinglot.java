@@ -31,8 +31,6 @@ public class Parkinglot {
         }else{
             return null;
         }
-
-
     }
 
 
