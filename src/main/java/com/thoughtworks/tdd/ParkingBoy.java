@@ -25,12 +25,16 @@ public class ParkingBoy {
     }
 
     public Ticket park(Car car) throws Exception {
+        return getTicket(car);
+    }
+
+    private Ticket getTicket(Car car) throws Exception {
         if (car==null){
             throw new Exception("you should has a car");
         }
         if(isCarHasParked(parkingLots,car)) throw new Exception("You should provide a car that haven't park.");
 
-        if(isFull(parkingLots)) throw new ParkingLotIsFullException("Not enough position.");
+        if(isFull(parkingLots)) throw new FullException("Not enough position.");
 
         Ticket ticket = new Ticket();
         ParkingLot parkingLotParked = parkingLots.stream()
@@ -42,9 +46,12 @@ public class ParkingBoy {
         return ticket;
     }
 
-    public Car fetch(Ticket ticket) throws  NoTicketException, WrongTicketException {
-        if (ticket == null) throw new NoTicketException("Please provide your parking ticket.");
+    public Car fetch(Ticket ticket) throws Exception {
+        return getCar(ticket);
+    }
 
+    private Car getCar(Ticket ticket) throws Exception {
+        if (ticket == null) throw new NoTicketException("Please provide your parking ticket.");
         Car car = null;
         ParkingLot parkingLotHasCar= parkingLots.stream()
                 .filter(parkingLot -> parkingLot.getTicketCarMap().containsKey(ticket))
@@ -52,7 +59,6 @@ public class ParkingBoy {
                 .get();
         car=parkingLotHasCar.getTicketCarMap().get(ticket);
         parkingLotHasCar.getTicketCarMap().remove(ticket);
-
         if (car == null) throw new WrongTicketException("Unrecognized parking ticket.");
         return car;
     }

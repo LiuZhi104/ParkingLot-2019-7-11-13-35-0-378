@@ -1,6 +1,5 @@
 package com.thoughtworks.tdd;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -82,7 +81,7 @@ public class ParkingBoyTest {
             parkingBoy.park(new Car());
         }
         //then
-       assertThrows(ParkingLotIsFullException.class,() -> parkingBoy.park(car));
+       assertThrows(FullException.class,() -> parkingBoy.park(car));
     }
     @Test
     public void should_return_Unrecognized_parking_ticket_when_given_wrong_ticket() throws Exception {

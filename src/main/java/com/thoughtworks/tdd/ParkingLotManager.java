@@ -25,7 +25,7 @@ public class ParkingLotManager extends ParkingBoy{
         return managementList.get(name).park(car);
     }
 
-    public Car specifyFetch(String name,Ticket ticket) throws WrongTicketException, NoTicketException {
+    public Car specifyFetch(String name,Ticket ticket) throws Exception {
         return managementList.get(name).fetch(ticket);
     }
 

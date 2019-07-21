@@ -1,6 +1,5 @@
 package com.thoughtworks.tdd;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -139,6 +138,7 @@ public class SuperSmartParkingBoyTest {
         superSmartParkingBoy.park(SecondCar);
         //then
         assertEquals(parkingLots.get(1).getTicketCarMap().isEmpty(),false);
+        
     }
     @Test
     public void should_parking_lot_1_is_empty_when_park_1_car_and_paking_lot_2_has_15_capacity() throws Exception {
